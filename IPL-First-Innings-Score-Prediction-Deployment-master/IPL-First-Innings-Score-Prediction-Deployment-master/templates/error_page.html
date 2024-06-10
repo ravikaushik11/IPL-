@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Please select different teams and try again.
+    </h1>
+
+    <form action="{{ url_for('error') }}" method="post">
+        <button type="submit">Go Back</button>
+    </form>
+</body>
+</html>
